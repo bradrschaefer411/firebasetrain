@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Train Schedule</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/css/style.css"></script>
+</body>
+</html>
+
+<!-- // Your web app's Firebase configuration
+const firebaseConfig = {
+apiKey: "AIzaSyDJRZ7ZNt_qKLacfXsd3AHzYBFOxf_YeM0",
+authDomain: "traintest-593b8.firebaseapp.com",
+databaseURL: "https://traintest-593b8.firebaseio.com",
+projectId: "traintest-593b8",
+storageBucket: "traintest-593b8.appspot.com",
+messagingSenderId: "354114566987",
+appId: "1:354114566987:web:b0b0f3328e7cbe881746ce"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var database = firebase.database();
+// firebase.analytics();
+// function writeTrainData(name, destination, frequency, trainTime) {
+//   firebase.database().ref('trains/').set({
+//     name: name,
+//     destination: destination,
+//     frequency: frequency,
+//     trainTime: trainTime
+//   });
+// }
+var newTrain = {
+  name:"testName",
+  destination:"testDestination",
+  frequency:"testFrequency",
+  trainTime:"testTrainTime"
+}
+database.ref().push(newTrain);
+console.log(newTrain)
+// writeTrainData("testName", "testDestination", "testFrequency", "testTrainTime") -->
